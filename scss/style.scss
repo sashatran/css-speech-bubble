@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600');
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  > * {
+    margin: 10px;
+  }
+}
+
+.one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  background: #CD486B;
+  border-radius: 10px;
+  color: #FFF;
+  font-weight: 300;
+  letter-spacing: 1px;
+  animation: 1s shake ease infinite;
+  &:before {
+    position: absolute;
+    top: 48px;
+    left: 50px;
+    content: '';
+    border-top: 12px solid #CD486B;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+  }
+}
+
+.two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 230px;
+  height: 200px;
+  background: #549F93;
+  border-radius: 100%;
+  font-size: 17px;
+  color: #FFF;
+  letter-spacing: 1px;
+  &:before {
+    position: absolute;
+    top: 170px;
+    left: 15px;
+    content: '';
+    border-top: 22px solid #549F93;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    transform: rotate(35deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    tranform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    tranform: rotate(3deg);
+  }
+}
